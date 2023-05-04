@@ -1,0 +1,200 @@
+// width height
+@for $i from 1 to 1001 {
+  .w#{$i} {
+    width: #{$i}rem !important;
+  }
+  .h#{$i} {
+    height: #{$i}rem !important;
+  }
+  .minw#{$i} {
+    min-width: #{$i}rem !important;
+  }
+  .minh#{$i} {
+    min-height: #{$i}rem !important;
+  }
+  .width100 {
+    width: 100% !important;
+  }
+  .height100 {
+    height: 100% !important;
+  }
+  .vh#{$i} {
+    height: #{$i}vh !important;
+  }
+  .vw#{$i} {
+    width: #{$i}vw !important;
+  }
+}
+
+// lineHeight
+.lh {
+    @for $i from 60 to 200 {
+        &#{$i} {line-height: calc(#{$i} * 1%);}
+    }
+}
+// margin/padding
+@for $i from 1 to 301 {
+    .m#{$i} {
+        margin: #{$i}rem;
+    }
+    .mx#{$i} {
+        margin-right: #{$i}rem;
+        margin-left: #{$i}rem;
+    }
+    .my#{$i} {
+        margin-top: #{$i}rem;
+        margin-bottom: #{$i}rem;
+    }
+    .mt#{$i} {
+        margin-top: #{$i}rem;
+    }
+    .mb#{$i} {
+        margin-bottom: #{$i}rem;
+    }
+    .ml#{$i} {
+        margin-left: #{$i}rem;
+    }
+    .-ml#{$i} {
+        margin-left: -#{$i}rem;
+    }
+    .mr#{$i} {
+        margin-right: #{$i}rem;
+    }
+    
+    .p#{$i} {
+        padding: #{$i}rem;
+    }
+    .px#{$i} {
+        padding-right: #{$i}rem;
+        padding-left: #{$i}rem;
+    }
+    .py#{$i} {
+        padding-top: #{$i}rem;
+        padding-bottom: #{$i}rem;
+    }
+    .pt#{$i} {
+        padding-top: #{$i}rem;
+    }
+    .pb#{$i} {
+        padding-bottom: #{$i}rem;
+    }
+    .pl#{$i} {
+        padding-left: #{$i}rem;
+    }
+    .pr#{$i} {
+        padding-right: #{$i}rem;
+    }
+}
+
+// flex
+.flex {
+    display: flex;
+}
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+}
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.justifyStart {
+    display: flex;
+    justify-content: flex-start;
+}
+.justifyCenter {
+    display: flex;
+    justify-content: center;
+}
+.justifyEnd {
+    display: flex;
+    justify-content: flex-end;
+}
+.alignStart {
+    display: flex;
+    align-items: flex-start;
+}
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+.alignEnd {
+    display: flex;
+    align-items: flex-end;
+}
+.flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.txtCenter {
+    text-align: center;
+}
+.flex-none {
+    flex: none;
+}
+@for $i from 1 to 10 {
+    .flex#{$i} {
+        flex: #{$i};
+    }
+}
+
+//radius
+.radius {
+  border-radius: var(--radius);
+}
+@for $i from 1 to 50 {
+  .r#{$i} {
+    border-radius: #{$i}rem;
+  }
+}
+
+// gap
+@for $i from 1 to 101 {
+    .gap#{$i} {
+        gap: #{$i}rem ;
+    }
+}
+
+.scoll {
+  overflow: scroll;
+}
+.scollY {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.displayNone {
+    display: none;
+}
+
+.overHidden {
+    overflow: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+}
+.relative {
+    position: relative;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+@for $i from 1 to 5 {
+    .ellipsis#{$i} {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+         -webkit-line-clamp: #{$i};
+         -webkit-box-orient: vertical;
+    }
+}
