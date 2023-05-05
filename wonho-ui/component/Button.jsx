@@ -5,23 +5,53 @@ const Button = ({children, className, onClick, variant, size, color, square, dis
   return (
     <>
       <button className=
-{`${className ? className : ''}
-${styles.button} 
-${round ? styles.round : ''}
-${square ? styles.square : ''}
-${variant == 'outlined' ? styles.outlined :
-  variant == 'contained' ? styles.contained : ''}
-${shadow ? styles.shadow : ''}
-${color == 'primary' ? styles.primary :
-  color == 'white' ? styles.white :
-  color == 'gray' ? styles.gray :
-  color == 'graye' ? styles.graye : ''}
-${size == 'large' ? styles.large :
-  size == 'medium' ? styles.medium :
-  size == 'small' ? styles.small :
-  size == 'extraSmall' ? styles.extraSmall : ''}
-${disabled ? styles.disabled : ''}
-`}
+      { 
+        styles.button
+        + ' ' + 
+        (round ? styles.round : '')
+        + ' ' +
+        (square ? styles.square : '')
+        + ' ' +
+        (variant == 'outliend' ? styles.outlined :
+        variant == 'contained' ? styles.contained : '' )
+        + ' ' +
+        (shadow ? styles.shadow: '')
+        + ' ' +
+        (color == 'primary' ? styles.primary :
+        color == 'secondary' ? styles.secondary :
+        color == 'tertiary' ? styles.tertiary :
+        color == 'white' ? styles.white :
+        color == 'gray' ? styles.gray :
+        color == 'graye' ? styles.graye : '')
+        + ' ' +
+        (size == 'large' ? styles.large :
+        size == 'medium' ? styles.meidum :
+        size == 'small' ? styles.small :
+        size == 'extraSmall' ? styles.extraSmall : '')
+        + ' ' +
+        (disabled ? styles.disabled : '')
+        + ' ' +
+        (className ? className : '' )
+      }
+// {`${className ? className : ''}
+// ${styles.button} 
+// ${round ? styles.round : ''}
+// ${square ? styles.square : ''}
+// ${variant == 'outlined' ? styles.outlined :
+//   variant == 'contained' ? styles.contained : ''}
+// ${shadow ? styles.shadow : ''}
+// ${color == 'primary' ? styles.primary :
+//   color == 'secondary' ? styles.secondary :
+//   color == 'tertiary' ? styles.tertiary :
+//   color == 'white' ? styles.white :
+//   color == 'gray' ? styles.gray :
+//   color == 'graye' ? styles.graye : ''}
+// ${size == 'large' ? styles.large :
+//   size == 'medium' ? styles.medium :
+//   size == 'small' ? styles.small :
+//   size == 'extraSmall' ? styles.extraSmall : ''}
+// ${disabled ? styles.disabled : ''}
+// `}
         onClick={onClick}
       >
         {children}

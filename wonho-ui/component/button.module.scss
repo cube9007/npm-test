@@ -3,9 +3,6 @@
 .button {
     border: none;
     background-color: transparent;
-    &:not(.disabled) {
-        cursor: pointer;
-    }
     position: relative;
     display: flex;
     align-items: center;
@@ -17,9 +14,11 @@
     border-radius: var(--radius);
     transition: 0.5s;
     overflow: hidden;
+    &:not(.disabled) {
+        cursor: pointer;
+    }
     &:hover:not(.disabled) {
         background-color: rgb($black, 0.1);
-        
     }
     // Ripple
     &::before {
@@ -43,7 +42,7 @@
 
     // round
     &.round {
-        border-radius: 100rem;
+        border-radius: 1000rem;
     }
     //
     &.shadow {
@@ -53,14 +52,20 @@
     &.primary {
         color: var(--primary);
         &:hover:not(.disabled) {
-            background-color: rgb(var(--primary), 0.1);
+            background-color: rgb(var(--set-primary), 0.1);
         }
         &::before {
-            background-color: rgb(var(--primary), 0.1);
+            background-color: rgb(var(--set-primary), 0.1);
         }
     }
     &.white {
         background-color: $white !important;
+         &:hover:not(.disabled) {
+            background-color: rgb($black , 0.1);
+        }
+        &::before {
+            background-color: rgb($black , 0.1);
+        }
     }
     //variant
     &.outlined {
@@ -85,6 +90,15 @@
     &.contained {
         background-color: var(--primary);
         color: $white;
+        &:not(.disabled):hover {
+            background-color: var(--primary_light);
+        }
+        &.secondary {
+            background-color: var(--secondary);
+            &:not(.disabled):hover {
+                background-color: var(--secondary_light);
+            }
+        }
         &.gray {
             background-color: $gray6;
             &:not(.disabled):hover {
@@ -102,9 +116,7 @@
             background-color: $grayc;
             color: $white;
         }
-        &:not(.disabled):hover {
-            background-color: var(--primary_light);
-        }
+        
         &::before {
             background-color: rgb($white, 0.2) !important;
         }
@@ -150,44 +162,3 @@
         padding: 0;
     }
 }
-
-// a,
-// button {
-//     &.hover {
-//         &-black-10 {
-//             transition: 0.3s;
-//             &:hover {
-//                 background-color: $black_10p !important;
-//                 &>i {
-//                     background-color: $black;
-//                 }
-//             }
-//         }
-//         &-black-30 {
-//             transition: 0.3s;
-//             &:hover {
-//                 background-color: $black_30p !important;
-//                 &>i {
-//                     background-color: $white;
-//                 }
-//             }
-//         }
-//         &-graye {
-//             transition: 0.3s;
-//             &:hover {
-//                 background-color: $graye;
-//                 &>i {
-//                     background-color: $black;
-//                 }
-//             }
-//         }
-//         &-txt {
-//             &-primary {
-//                 transition: 0.3s;
-//                 &:hover {
-//                     color: var(--primary);
-//                 }
-//             }
-//         }
-//     }
-// }

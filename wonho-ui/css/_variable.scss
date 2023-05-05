@@ -12,6 +12,15 @@ html {
   // color
   --set-primary: 63,70,243;
   --primary_light: rgb(121,126,252);
+  --primary_deep: rgb(10,19,225);
+
+  --set-secondary : 225,20,81;
+  --secondary_light: rgb(244,63,118);
+  --secondary_deep: rgb(198,1,60);
+
+  --set-tertiary : 18,170,161;
+  --tertiary_light: rgb(10,142,135);
+  --tertiary_deep: rgb(38,206,196);
   // btn
   --btn-size-large: 44rem;
   --btn-size-medium: 34rem;
@@ -21,12 +30,14 @@ html {
   --btn-txt-medium:  13rem;
   --btn-txt-small:  12rem;
   --btn-txt-extraSmall:  12rem;
-  --btn-shadow : 0 0 8rem 0 rgb($black, 0.15);
+  --btn-shadow : 0 0 8rem 0 rgb(0,0,0,0.15);
 }
 
 // 이부분은 복사 안해도 됩니다.
 :root {
   --primary: rgb(var(--set-primary));
+  --secondary: rgb(var(--set-secondary));
+  --tertiary: rgb(var(--set-tertiary));
 }
 
 // colors
@@ -53,6 +64,13 @@ $transparent: transparent;
 $colors: (
   "primary" : var(--primary),
   "primary_light" : var(--primary_light),
+  "primary_deep" : var(--primary_deep),
+  "secondary" : var(--secondary),
+  "secondary_light" : var(--secondary_light),
+  "secondary_deep" : var(--secondary_deep),
+  "tertiary" : var(--tertiary),
+  "tertiary_light" : var(--tertiary_light),
+  "tertiary_deep" : var(--tertiary_deep),
   "black" : $black,
   "gray1" : $gray1,
   "gray2" : $gray2,
@@ -92,55 +110,33 @@ $colors: (
   }
 }
 
+$main : (
+  "primary" : var(--set-primary),
+  "secondary" : var(--set-secondary),
+  "tertiary" : var(--set-tertiary),
+  "black" : $black,
+  "white" : $white,
+);
+
 @for $i from 1 to 99 {
-  .bgc-primary_#{$i}p {
-      background-color: rgb(var(--set-primary), calc(#{$i} * 0.01));
-  }
-  .txt-primary_#{$i}p {
-      color: rgb(var(--set-primary), calc(#{$i} * 0.01));
-  }
-  .otl-primary_#{$i}p {
-      border: 1px solid rgb(var(--set-primary), calc(#{$i} * 0.01));
-  }
-  .otlb-primary_#{$i}p {
-      border-bottom: 1px solid rgb(var(--set-primary), calc(#{$i} * 0.01));
-  }
-  .otlb-primary_#{$i}p-dashed {
-      border-bottom: 1px dashed rgb(var(--set-primary), calc(#{$i} * 0.01));
+  @each $semantic, $color in $main {
+    .bgc-#{$semantic}_#{$i}p {
+        background-color: rgb($color, calc(#{$i} * 0.01));
+    }
+    .txt-#{$semantic}_#{$i}p {
+        color: rgb($color, calc(#{$i} * 0.01));
+    }
+    .otl-#{$semantic}_#{$i}p {
+        border: 1px solid rgb($color, calc(#{$i} * 0.01));
+    }
+    .otlb-#{$semantic}_#{$i}p {
+        border-bottom: 1px solid rgb($color, calc(#{$i} * 0.01));
+    }
+    .otlb-#{$semantic}_#{$i}p-dashed {
+        border-bottom: 1px dashed rgb($color, calc(#{$i} * 0.01));
+    }
   }
   
-  .bgc-black_#{$i}p {
-      background-color: rgb($black, calc(#{$i} * 0.01));
-  }
-  .txt-black_#{$i}p {
-      color: rgb($black, calc(#{$i} * 0.01));
-  }
-  .otl-black_#{$i}p {
-      border: 1px solid rgb($black, calc(#{$i} * 0.01));
-  }
-  .otlb-black_#{$i}p {
-      border-bottom: 1px solid rgb($black, calc(#{$i} * 0.01));
-  }
-  .otlb-black_#{$i}p-dashed {
-      border-bottom: 1px dashed rgb($black, calc(#{$i} * 0.01));
-  }
-
-  .bgc-white_#{$i}p {
-      background-color: rgb($white, calc(#{$i} * 0.01));
-  }
-  .txt-white_#{$i}p {
-      color: rgb($white, calc(#{$i} * 0.01));
-  }
-  .otl-white_#{$i}p {
-      border: 1px solid rgb($white, calc(#{$i} * 0.01));
-  }
-  .otlb-white_#{$i}p {
-      border-bottom: 1px solid rgb($white, calc(#{$i} * 0.01));
-  }
-  .otlb-white_#{$i}p-dashed {
-      border-bottom: 1px dashed rgb($white, calc(#{$i} * 0.01));
-  }
-
   .size#{$i} {
       font-size: #{$i}rem;
   }
