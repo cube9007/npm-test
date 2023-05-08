@@ -1,25 +1,27 @@
 @import "../css/variable";
 
 .button {
-    border: none;
+    border: 1px solid $transparent;
     background-color: transparent;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    padding: 0 20rem;
-    font-size: var(--btn-txt-medium);
-    height: var(--btn-size-large);
     border-radius: var(--radius);
     transition: 0.5s;
     overflow: hidden;
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: 0.5s;
+    }
     &:not(.disabled) {
         cursor: pointer;
     }
-    &:hover:not(.disabled) {
-        background-color: rgb($black, 0.1);
-    }
+    
     // Ripple
     &::before {
         content: '';
@@ -44,81 +46,38 @@
     &.round {
         border-radius: 1000rem;
     }
-    //
+    &.rect {
+        border-radius: 0rem;
+    }
+    // shadow
     &.shadow {
         box-shadow: var(--btn-shadow);
     }
-    //color
-    &.primary {
-        color: var(--primary);
-        &:hover:not(.disabled) {
-            background-color: rgb(var(--set-primary), 0.1);
-        }
-        &::before {
-            background-color: rgb(var(--set-primary), 0.1);
+    
+    // color
+    &.color {
+        @each $semantic, $color in $colors {
+            &-#{$semantic} {
+                color: $color;
+            }
         }
     }
-    &.white {
-        background-color: $white !important;
-         &:hover:not(.disabled) {
-            background-color: rgb($black , 0.1);
-        }
-        &::before {
-            background-color: rgb($black , 0.1);
+    
+    // outlined 
+    &.otl {
+        @each $semantic, $color in $colors {
+            &-#{$semantic} {
+                border: 1px solid $color;
+            }
         }
     }
-    //variant
-    &.outlined {
-        border: 1px solid var(--primary);
-        color: var(--primary);
-        &.gray {
-            border: 1px solid $gray6;
-            color: $gray6;
-        }
-        &.graye {
-            border: 1px solid $graye;
-            color: $gray9;
-            &:not(.disabled):hover {
-                background-color: $grayd !important;
+
+    // bg color
+    &.bg {
+        @each $semantic, $color in $colors {
+            &-#{$semantic} {
+                background-color: $color;
             }
-        }
-        &.disabled {
-            border: 1px solid $grayc;
-            color: $grayc;
-        }
-    }
-    &.contained {
-        background-color: var(--primary);
-        color: $white;
-        &:not(.disabled):hover {
-            background-color: var(--primary_light);
-        }
-        &.secondary {
-            background-color: var(--secondary);
-            &:not(.disabled):hover {
-                background-color: var(--secondary_light);
-            }
-        }
-        &.gray {
-            background-color: $gray6;
-            &:not(.disabled):hover {
-                background-color: $gray9 !important;
-            }
-        }
-        &.graye {
-            background-color: $graye;
-            color: $gray6;
-            &:not(.disabled):hover {
-                background-color: $grayd !important;
-            }
-        }
-        &.disabled {
-            background-color: $grayc;
-            color: $white;
-        }
-        
-        &::before {
-            background-color: rgb($white, 0.2) !important;
         }
     }
 
@@ -126,7 +85,7 @@
     &.large {
         font-size: var(--btn-txt-large);
         height: var(--btn-size-large);
-        padding: 0 30rem;
+        padding: var(--btn-p-large);
         &.square {
             width: var(--btn-size-large);
             max-width: var(--btn-size-large);
@@ -134,9 +93,21 @@
             padding: 0;
         }
     }
+    &.medium {
+        font-size: var(--btn-txt-medium);
+        height: var(--btn-size-medium);
+        padding: var(--btn-p-medium);
+        &.square {
+            width: var(--btn-size-medium !important);
+            max-width: var(--btn-size-medium !important);
+            min-width: var(--btn-size-medium !important);
+            padding: 0;
+        }
+    }
     &.small {
         font-size: var(--btn-txt-small);
         height: var(--btn-size-small);
+        padding: var(--btn-p-small);
         &.square {
             width: var(--btn-size-small !important);
             max-width: var(--btn-size-small !important);
@@ -147,7 +118,7 @@
     &.extraSmall {
         font-size: var(--btn-txt-extraSmall);
         height: var(--btn-size-extraSmall);
-        padding: 0 5rem;
+        padding: var(--btn-p-extraSmall);
         &.square {
             width: var(--btn-size-extraSmall !important);
             max-width: var(--btn-size-extraSmall !important);
@@ -155,10 +126,15 @@
             padding: 0;
         }
     }
-    &.square {
-        width: var(--btn-size-medium);
-        max-width: var(--btn-size-medium);
-        min-width: var(--btn-size-medium);
-        padding: 0;
+    // hover
+    &.hover {
+        &-bg {
+            &-primary {
+                &:hover {
+                    background-color: rgb(var(--set-primary), 0.8);
+                }   
+            }
+        }
     }
+    
 }
