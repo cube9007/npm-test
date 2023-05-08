@@ -25,7 +25,6 @@
     // Ripple
     &::before {
         content: '';
-        background-color: rgb($black, 0.1);
         position: absolute;
         border-radius: 300rem;
         width: 200rem;
@@ -35,13 +34,22 @@
         transition: 0.5s;
     }
     &:not(.disabled):active::before {
-        width: 5rem;
-        height: 5rem;
+        width: 0rem;
+        height: 0rem;
         opacity: 1;
         visibility: visible;
         transition: 0s;
     }
-
+    &.ripple {
+        @each $semantic, $color in $main {
+            &-#{$semantic}::before {
+                background-color: rgb($color, 0.15);
+            }
+        }
+        &-disabled::before {
+            background-color: transparent;
+        }
+    }
     // round
     &.round {
         border-radius: 1000rem;
@@ -126,13 +134,33 @@
             padding: 0;
         }
     }
+
     // hover
     &.hover {
         &-bg {
-            &-primary {
-                &:hover {
-                    background-color: rgb(var(--set-primary), 0.8);
-                }   
+            @each $semantic, $color in $colors {
+                &-#{$semantic}:hover {
+                    background-color: $color;
+                }
+            }
+            @each $semantic, $color in $main {
+                &-#{$semantic}_15p:hover {
+                    background-color: rgb($color, 0.15);
+                }
+            }
+        }
+        &-otl {
+            @each $semantic, $color in $colors {
+                &-#{$semantic}:hover {
+                    border: 1px solid $color;
+                }
+            }
+        }
+        &-color {
+            @each $semantic, $color in $colors {
+                &-#{$semantic}:hover {
+                    color: $color;
+                }
             }
         }
     }

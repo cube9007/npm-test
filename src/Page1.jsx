@@ -6,22 +6,35 @@ function Page1() {
     <>
       <div className='flexCenter flexColumn bgc-black_30p gap10'>
       <div className='flexCenter gap10'>
-        <Button 
-          variant='outlined'
-          color='black'
-          theme='primary'
-          size='large'
-          radius='round'
-        >
-          Like
-        </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='black' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray1' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray2' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray3' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray4' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray5' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray6' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray7' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray8' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='gray9' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='graya' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='grayb' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='grayc' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='grayd' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='graye' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='grayf5' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='grayf8' > Like </Button>
+      <Button variant='contained' disabled size='small' radius='round' theme='white' > Like </Button>
         
+
       </div>
       <div className='flexCenter gap10'>
+        <Button variant='normal' size='small' radius='round' theme='primary' > Like </Button>
+        <Button variant='normal' size='small' radius='round' theme='secondary' > Like </Button>
+        <Button variant='normal' size='small' radius='round' theme='tertiary' > Like </Button>
         <Button 
           className='' 
           size='medium' 
-          color='graya' 
+          theme='grayc'
           shadow 
           radius='round'
         >
