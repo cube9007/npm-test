@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, TextField } from '../wonho-ui/component';
+import { Button, TextField, TextArea } from '../wonho-ui/component';
 
 function Page1() {
   return (
@@ -35,7 +35,8 @@ function Page1() {
           size='medium'
         />
         <TextField 
-          className='w500'
+          className='main-search'
+          radius='rect'
           size='large'
         />
       </div>
@@ -60,39 +61,10 @@ function Page1() {
         />
       </div>
       <div className='flexCenter gap10'>
-        <Button variant='normal' size='small' radius='round' theme='primary' > Like </Button>
-        <Button variant='normal' size='small' radius='round' theme='secondary' > Like </Button>
-        <Button variant='normal' size='small' radius='round' theme='tertiary' > Like </Button>
-        <Button 
-          className='' 
-          size='medium'
-          variant='contained' 
-          theme='grayc'
-          shadow 
-          radius='round'
-        >
-          좋아요
-        </Button>
-        <Button 
-          className='' 
-          variant='contained'
-          size='small' 
-          theme='secondary'
-          shadow 
-        >
-          좋아요
-        </Button>
-
-        <Button 
-          className='' 
-          size='extraSmall' 
-          variant='outlined'
-          theme='black'
-          shadow 
-        >
-          좋아요
-        </Button>
-        
+        <TextArea
+          maxLength={100}
+          rows={10}
+        />
       </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>

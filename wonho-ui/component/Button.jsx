@@ -1,7 +1,5 @@
 import * as React from 'react';
 import styles from './button.module.scss';
-import '../css/style.scss'
-
 
 const Button = ({theme='primary', 
                 variant='normal', 

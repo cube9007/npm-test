@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styles from './textfield.module.scss';
-import '../css/style.scss'
 
 
 const TextField = ({
