@@ -29,15 +29,4 @@
         border: var(--textfield-disabled-otl);
         background-color: var(--textfield-disabled-bg);
     }
-    &-wrap {
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-        align-items: end;
-    }
-    &-max {
-        font-size: 12rem;
-        color: $gray9;
-        font-family: var(--font);
-    }
 }
