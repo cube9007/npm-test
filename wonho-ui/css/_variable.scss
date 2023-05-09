@@ -7,8 +7,10 @@ html {
 
 //이 부분만 복사하면 됩니다.
 :root {
+  // font
+  --font: 'Inter', sans-serif;
   // radius
-  --radius: 3rem;
+  --radius: 5rem;
   // color
   --set-primary: 63,70,243;
   --primary_light: rgb(121,126,252);
@@ -39,6 +41,21 @@ html {
   --btn-p-small: 0 10rem;
   --btn-p-extraSmall: 0 5rem;
   --btn-shadow : 0 0 8rem 0 rgb(0,0,0,0.15);
+
+  // textfield
+  --textfield-size-large: 44rem;
+  --textfield-size-medium: 34rem;
+  --textfield-size-small: 28rem;
+  --textfield-size-extraSmall: 24rem;
+  --textfield-txt-large:  14rem;
+  --textfield-txt-medium:  13rem;
+  --textfield-txt-small:  12rem;
+  --textfield-txt-extraSmall:  12rem;
+  --textfield-p-large: 0 15rem;
+  --textfield-p-medium: 0 13rem;
+  --textfield-p-small: 0 11rem;
+  --textfield-p-extraSmall: 0 9rem;
+  --textfield-focus-otl: #666;
 }
 
 // 이부분은 복사 안해도 됩니다.

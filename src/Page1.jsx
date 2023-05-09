@@ -1,31 +1,63 @@
 import * as React from 'react';
-import { Button } from '../wonho-ui/component';
+import { Button, TextField } from '../wonho-ui/component';
 
 function Page1() {
   return (
     <>
-      <div className='flexCenter flexColumn bgc-black_30p gap10'>
+      <div className='flexCenter flexColumn bgc-black_10p gap10'>
       <div className='flexCenter gap10'>
-      <Button variant='contained' disabled size='small' radius='round' theme='black' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray1' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray2' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray3' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray4' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray5' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray6' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray7' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray8' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='gray9' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='graya' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='grayb' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='grayc' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='grayd' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='graye' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='grayf5' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='grayf8' > Like </Button>
-      <Button variant='contained' disabled size='small' radius='round' theme='white' > Like </Button>
-        
-
+        <TextField 
+          size='extraSmall'
+          radius='round'
+        />
+        <TextField 
+          size='small'
+          radius='round'
+        />
+        <TextField 
+          size='medium'
+          radius='round'
+        />
+        <TextField 
+          className='w500'
+          size='large'
+          radius='rect'
+        />
+      </div>
+      <div className='flexCenter gap10'>
+        <TextField 
+          size='extraSmall'
+        />
+        <TextField 
+          size='small'
+        />
+        <TextField 
+          size='medium'
+        />
+        <TextField 
+          className='w500'
+          size='large'
+        />
+      </div>
+      <div className='flexCenter gap10'>
+        <div className='flex relative'>
+        <TextField 
+          size='medium'
+          className='h50'
+          radius='rect'
+        />
+        <p className='icon'>o</p>
+        </div>
+        <TextField 
+          size='medium'
+          disabled
+          placeholder='안녕'
+        />
+        <TextField 
+          size='medium'
+          readOnly
+          defaultValue='안녕'
+        />
       </div>
       <div className='flexCenter gap10'>
         <Button variant='normal' size='small' radius='round' theme='primary' > Like </Button>
@@ -33,7 +65,8 @@ function Page1() {
         <Button variant='normal' size='small' radius='round' theme='tertiary' > Like </Button>
         <Button 
           className='' 
-          size='medium' 
+          size='medium'
+          variant='contained' 
           theme='grayc'
           shadow 
           radius='round'

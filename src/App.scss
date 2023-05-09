@@ -5,3 +5,13 @@
 .test {
   border: 1px solid red;
 }
+
+.searchbar {
+  padding: 0px 30px !important;
+}
+
+.icon {
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 20px;
+}

@@ -67,12 +67,12 @@ const Button = ({theme='primary',
     else if (theme == 'gray9') {hoverBg = hoverBg || 'grayc'}
     else if (theme == 'graya') {hoverBg = hoverBg || 'gray7'}
     else if (theme == 'grayb') {hoverBg = hoverBg || 'gray8'}
-    else if (theme == 'grayc') {hoverBg = hoverBg || 'gray9'}
-    else if (theme == 'grayd') {hoverBg = hoverBg || 'graya'}
-    else if (theme == 'graye') {hoverBg = hoverBg || 'grayb'}
-    else if (theme == 'grayf5') {hoverBg = hoverBg || 'grayc'}
-    else if (theme == 'grayf8') {hoverBg = hoverBg || 'grayc'}
-    else if (theme == 'white') {hoverBg = hoverBg || 'grayd'}
+    else if (theme == 'grayc') {hoverBg = hoverBg || 'graya'}
+    else if (theme == 'grayd') {hoverBg = hoverBg || 'grayb'}
+    else if (theme == 'graye') {hoverBg = hoverBg || 'grayc'}
+    else if (theme == 'grayf5') {hoverBg = hoverBg || 'grayd'}
+    else if (theme == 'grayf8') {hoverBg = hoverBg || 'grayd'}
+    else if (theme == 'white') {hoverBg = hoverBg || 'graye'}
   } 
   // outlined 조건문
   else if (variant == 'outlined') {
@@ -222,7 +222,6 @@ const Button = ({theme='primary',
         + ' ' +
         (className ? className : '' )
       }
-
         onClick={onClick}
       >
         {children}
