@@ -60,10 +60,39 @@ function Page1() {
           defaultValue='안녕'
         />
       </div>
-      <div className='flexCenter gap10'>
+      <div className='flex gap10'>
+        <TextArea
+          maxLength={100}
+          className='w150 h50'
+        />
         <TextArea
           maxLength={100}
           rows={10}
+          defaultValue='안녕하세요'
+          disabled
+        />
+        <TextArea
+          rows={10}
+          defaultValue='안녕하세요'
+          readOnly
+        />
+        <TextArea
+          maxLength={100}
+          rows={10}
+          rect
+        />
+        <TextArea
+          maxLength={100}
+          rows={10}
+          defaultValue='안녕하세요'
+          disabled
+          rect
+        />
+        <TextArea
+          rows={10}
+          defaultValue='안녕하세요'
+          readOnly
+          rect
         />
       </div>
       <div className='flexCenter gap10'>

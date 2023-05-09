@@ -55,8 +55,18 @@ html {
   --textfield-p-medium: 0 13rem;
   --textfield-p-small: 0 11rem;
   --textfield-p-extraSmall: 0 9rem;
+  --textfield-color: #999;
+  --textfield-focus-color: #666;
   --textfield-otl: #ccc;
   --textfield-focus-otl: #666;
+  --textfield-read-only-bg: #eee;
+  --textfield-disabled-bg: #ccc;
+  --textfield-disabled-otl: transparent;
+
+  --textarea-font-size: 12rem;
+  --textarea-otl: #ccc;
+  --textarea-focus-otl: #666;
+  --textarea-p: 12rem 12rem;
 }
 
 // 이부분은 복사 안해도 됩니다.

@@ -5,28 +5,18 @@
     border-radius: var(--radius);
     border: 1px solid var(--textfield-otl);
     font-weight: 400;
-    color: $gray9;
+    color: var(--textfield-color);
     &:focus {
         border: 1px solid var(--textfield-focus-otl);
         outline: none;
-        color: $gray6;
-        &~.textarea-box {
-            border: 1px solid $gray6;
-        }
+        color: var(--textfield-focus-color);
     }
     &:read-only {
-        background-color: $graye;
-        &~.textarea-box {
-            background-color: $graye;
-        }
+        background-color: var(--textfield-read-only-bg);
     }
     &:disabled {
-        border: transparent;
-        background-color: $grayc;
-        &~.textarea-box {
-            border: transparent;
-            background-color: $grayc;
-        }
+        border: var(--textfield-disabled-otl);
+        background-color: var(--textfield-disabled-bg);
     }
 }
 
