@@ -1,0 +1,100 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.checkbox {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+        content: '';
+        @include mask("checkbox.svg");
+        background-color: var(--checkbox);
+    }
+    &:checked::after {
+        @include mask("checkbox-checked.svg");
+    }
+    &:disabled::after {
+        background-color: var(--checkbox-disabled);
+    }
+    &::before {
+        content: '';
+        @include noMask;
+        position: absolute;
+        border-radius: 100%;
+        
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    
+
+    // color
+    @each $semantic, $color in $colors {
+        &.color-#{$semantic} {
+            &:checked::after {
+                background-color: $color;
+            }
+            
+        }
+    }
+    // ripple
+    @each $semantic, $color in $main {
+        &.ripple-#{$semantic} {
+            &::before {
+                background-color: rgb($color, 0.3);
+            }
+        }
+    }
+
+    // size
+    &.large {
+        &::after {
+            width: var(--checkbox-size-large);
+            height: var(--checkbox-size-large);
+        }
+        &::before {
+            width: var(--checkbox-ripple-size-large);
+            height: var(--checkbox-ripple-size-large);
+        }
+    }
+    &.medium {
+        &::after {
+            width: var(--checkbox-size-medium);
+            height: var(--checkbox-size-medium);
+        }
+        &::before {
+            width: var(--checkbox-ripple-size-medium);
+            height: var(--checkbox-ripple-size-medium);
+        }
+    }
+    &.small {
+        &::after {
+            width: var(--checkbox-size-small);
+            height: var(--checkbox-size-small);
+        }
+        &::before {
+            width: var(--checkbox-ripple-size-small);
+            height: var(--checkbox-ripple-size-small);
+        }
+    }
+    &.extraSmall {
+        &::after {
+            width: var(--checkbox-size-extraSmall);
+            height: var(--checkbox-size-extraSmall);
+        }
+        &::before {
+            width: var(--checkbox-ripple-size-extraSmall);
+            height: var(--checkbox-ripple-size-extraSmall);
+        }
+    }
+
+    &:active::before {
+        opacity: 1;
+        width: 0rem;
+        height: 0rem;
+        transition: 0s;
+    }
+    &:disabled::before {
+        display: none;
+    }
+}

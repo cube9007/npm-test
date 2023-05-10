@@ -22,11 +22,20 @@
 .main-search {
   width: 500px;
   height: 50px !important;
-  border: 7px solid $graya;
+  border: 7px solid var(--graya);
   &:focus {
     border: 7px solid var(--primary);
   }
 }
 body {
   height: 150vh;
+}
+
+.checkbox {
+  &::after {
+    -webkit-mask-image: url("./assets/radio.svg");
+  }
+  &:checked::after {
+    -webkit-mask-image: url("./assets/radio-checked.svg");
+  }
 }

@@ -1,5 +1,5 @@
 @mixin mask($img) {
-    -webkit-mask-image: url("@/assets/images/" + $img);
+    -webkit-mask-image: url("./image/" + $img);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
     -webkit-mask-position: 0 0;

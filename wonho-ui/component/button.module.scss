@@ -2,8 +2,8 @@
 
 .button {
     font-family: var(--font);
-    border: 1px solid $transparent;
-    background-color: transparent;
+    border: 1px solid var(--transparent);
+    background-color: var(--transparent);
     position: relative;
     display: flex;
     align-items: center;

@@ -6,6 +6,7 @@
     border: 1px solid var(--textfield-otl);
     font-weight: 400;
     color: var(--textfield-color);
+    background-color: var(--white);
     &:focus {
         border: 1px solid var(--textfield-focus-otl);
         outline: none;

@@ -7,6 +7,9 @@ import '../wonho-ui/css/style.scss'
 import './App.scss';
 
 function App() {
+  React.useEffect(()=> {
+    document.documentElement.setAttribute("data-theme", "light");
+  }, [])
   return (
     <>
     <HashRouter>

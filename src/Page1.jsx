@@ -1,7 +1,13 @@
 import * as React from 'react';
-import { Button, TextField, TextArea } from '../wonho-ui/component';
+import { Button, TextField, TextArea, Checkbox } from '../wonho-ui/component';
 
 function Page1() {
+  const LightMode = () => {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+  const DarkMode = () => {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
   return (
     <>
       <div className='flexCenter flexColumn bgc-black_10p gap10'>
@@ -24,76 +30,33 @@ function Page1() {
           radius='rect'
         />
       </div>
-      <div className='flexCenter gap10'>
-        <TextField 
-          size='extraSmall'
-        />
-        <TextField 
-          size='small'
-        />
-        <TextField 
-          size='medium'
-        />
-        <TextField 
-          className='main-search'
-          radius='rect'
-          size='large'
-        />
-      </div>
-      <div className='flexCenter gap10'>
-        <div className='flex relative'>
-        <TextField 
-          size='medium'
-          className='h50'
-          radius='rect'
-        />
-        <p className='icon'>o</p>
-        </div>
-        <TextField 
-          size='medium'
-          disabled
-          placeholder='안녕'
-        />
-        <TextField 
-          size='medium'
-          readOnly
-          defaultValue='안녕'
-        />
-      </div>
       <div className='flex gap10'>
-        <TextArea
-          maxLength={100}
-          className='w150 h50'
-        />
-        <TextArea
-          maxLength={100}
-          rows={10}
-          defaultValue='안녕하세요'
-          disabled
-        />
-        <TextArea
-          rows={10}
-          defaultValue='안녕하세요'
-          readOnly
-        />
-        <TextArea
-          maxLength={100}
-          rows={10}
-          rect
-        />
-        <TextArea
-          maxLength={100}
-          rows={10}
-          defaultValue='안녕하세요'
-          disabled
-          rect
-        />
-        <TextArea
-          rows={10}
-          defaultValue='안녕하세요'
-          readOnly
-          rect
-        />
+        <Checkbox size='large' className='checkbox'/>
+        <Checkbox size='medium' theme='secondary'/>
+        <Checkbox size='small'/>
+        <Checkbox size='extraSmall'/>
+        <Button size='large' onClick={LightMode} variant='contained'>
+          LightMode
+        </Button>
+        <Button size='large' onClick={DarkMode} variant='contained'>
+          DarkMode
+        </Button>
+        <Button size='large' variant='contained' theme='secondary'>
+          Button
+        </Button>
+        <Button size='large' variant='normal' shadow theme='secondary'>
+          Button
+        </Button>
+        <Button size='large' variant='contained' theme='tertiary'>
+          Button
+        </Button>
+        <Button size='medium' variant='contained' shadow theme='gray9'>
+          Button
+        </Button>
+        
+        <Button size='medium' variant='contained' shadow theme='gray6'>
+          Button
+        </Button>
       </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>

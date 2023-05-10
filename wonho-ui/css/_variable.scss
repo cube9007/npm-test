@@ -2,30 +2,76 @@
 $imgurl: "@/assets/images/";
 
 html {
-  font-size: 1px
+  font-size: 1px;
 }
 
 //이 부분만 복사하면 됩니다.
 :root {
+  // mode
+  &[data-theme = "light"] {
+    --set-black: 0,0,0;
+    --set-white: 255,255,255;
+    --set-primary: 63,70,243;
+    --primary_light: rgb(121,126,252);
+    --primary_deep: rgb(10,19,225);
+    
+    --secondary_light: rgb(244,63,118);
+    --secondary_deep: rgb(198,1,60);
+    --set-secondary : 225,20,81;
+    
+    --tertiary_light: rgb(10,142,135);
+    --tertiary_deep: rgb(38,206,196);
+    --set-tertiary : 18,170,161;
+  } 
+  &[data-theme = "dark"] {
+    background-color: black;
+    --set-black: 255,255,255;
+    --set-white: 0,0,0;
+    --set-primary: 108,114,254;
+    --primary_light: rgb(60,67,238);
+    --primary_deep: rgb(137,142,255);
+    
+    --set-secondary : 245,62,117;
+    --secondary_light: rgb(226,29,88);
+    --secondary_deep: rgb(243,122,158);
+    
+    --set-tertiary : 56,227,217;
+    --tertiary_light: rgb(15,176,167);
+    --tertiary_deep: rgb(149,255,249);
+  }
   // font
   --font: 'Inter', sans-serif;
   // radius
   --radius: 5rem;
   // color
-  --set-primary: 63,70,243;
-  --primary_light: rgb(121,126,252);
-  --primary_deep: rgb(10,19,225);
+  
 
-  --set-secondary : 225,20,81;
-  --secondary_light: rgb(244,63,118);
-  --secondary_deep: rgb(198,1,60);
+  --primary: rgb(var(--set-primary));
+  --secondary: rgb(var(--set-secondary));
+  --tertiary: rgb(var(--set-tertiary));
+  --black: rgb(var(--set-black));
+  --white: rgb(var(--set-white));
 
-  --set-tertiary : 18,170,161;
-  --tertiary_light: rgb(10,142,135);
-  --tertiary_deep: rgb(38,206,196);
+  --disabled : var(--grayc);
+  --disabled_deep : var(--graya);
 
-  --disabled : #ccc;
-  --disabled_deep : #aaa;
+  --gray1: rgb(var(--set-black), 0.933);
+  --gray2: rgb(var(--set-black), 0.866);
+  --gray3: rgb(var(--set-black), 0.8);
+  --gray4: rgb(var(--set-black), 0.733);
+  --gray5: rgb(var(--set-black), 0.666);
+  --gray6: rgb(var(--set-black), 0.6);
+  --gray7: rgb(var(--set-black), 0.533);
+  --gray8: rgb(var(--set-black), 0.466);
+  --gray9: rgb(var(--set-black), 0.4);
+  --graya: rgb(var(--set-black), 0.333);
+  --grayb: rgb(var(--set-black), 0.266);
+  --grayc: rgb(var(--set-black), 0.2);
+  --grayd: rgb(var(--set-black), 0.133);
+  --graye: rgb(var(--set-black), 0.066);
+  --grayf5: rgb(var(--set-black), 0.04);
+  --grayf8: rgb(var(--set-black), 0.027);
+  --transparent: rgb(var(--set-black), 0);
 
   // btn
   --btn-size-large: 44rem;
@@ -40,7 +86,7 @@ html {
   --btn-p-medium: 0 20rem;
   --btn-p-small: 0 10rem;
   --btn-p-extraSmall: 0 5rem;
-  --btn-shadow : 0 0 8rem 0 rgb(0,0,0,0.15);
+  --btn-shadow : 0 0 8rem 0 var(--grayc);
 
   // textfield
   --textfield-size-large: 44rem;
@@ -55,47 +101,33 @@ html {
   --textfield-p-medium: 0 13rem;
   --textfield-p-small: 0 11rem;
   --textfield-p-extraSmall: 0 9rem;
-  --textfield-color: #999;
-  --textfield-focus-color: #666;
-  --textfield-otl: #ccc;
-  --textfield-focus-otl: #666;
-  --textfield-read-only-bg: #eee;
-  --textfield-disabled-bg: #ccc;
-  --textfield-disabled-otl: transparent;
+  --textfield-color: var(--gray9);
+  --textfield-focus-color: var(--gray6);
+  --textfield-otl: var(--grayc);
+  --textfield-focus-otl: var(--gray6);
+  --textfield-read-only-bg: var(--graye);
+  --textfield-disabled-bg: var(--grayc);
+  --textfield-disabled-otl: var(--transparent);
 
+  --textarea-otl: var(--grayc);
+  --textarea-focus-otl: var(--gray6);
+  
+  // checkbox
+  --checkbox: var(--gray6);
+  --checkbox-disabled : var(--gray9);
   --textarea-font-size: 12rem;
-  --textarea-otl: #ccc;
-  --textarea-focus-otl: #666;
   --textarea-p: 12rem 12rem;
-}
 
-// 이부분은 복사 안해도 됩니다.
-:root {
-  --primary: rgb(var(--set-primary));
-  --secondary: rgb(var(--set-secondary));
-  --tertiary: rgb(var(--set-tertiary));
+  // checkbox
+  --checkbox-size-large: 24rem;
+  --checkbox-size-medium: 20rem;
+  --checkbox-size-small: 16rem;
+  --checkbox-size-extraSmall: 14rem;
+  --checkbox-ripple-size-large: calc(var(--checkbox-size-large) * 2);
+  --checkbox-ripple-size-medium: calc(var(--checkbox-size-medium) * 2);
+  --checkbox-ripple-size-small: calc(var(--checkbox-size-small) * 2);
+  --checkbox-ripple-size-extraSmall: calc(var(--checkbox-size-extraSmall) * 2);
 }
-
-// colors
-$black: rgb(0,0,0);
-$gray1: #111;
-$gray2: #222;
-$gray3: #333;
-$gray4: #444;
-$gray5: #555;
-$gray6: #666;
-$gray7: #777;
-$gray8: #888;
-$gray9: #999;
-$graya: #aaa;
-$grayb: #bbb;
-$grayc: #ccc;
-$grayd: #ddd;
-$graye: #eee;
-$grayf5: #f5f5f5;
-$grayf8: #f8f8f8;
-$white: rgb(255,255,255);
-$transparent: transparent;
 
 $colors: (
   "primary" : var(--primary),
@@ -107,25 +139,25 @@ $colors: (
   "tertiary" : var(--tertiary),
   "tertiary_light" : var(--tertiary_light),
   "tertiary_deep" : var(--tertiary_deep),
-  "black" : $black,
-  "gray1" : $gray1,
-  "gray2" : $gray2,
-  "gray3" : $gray3,
-  "gray4" : $gray4,
-  "gray5" : $gray5,
-  "gray6" : $gray6,
-  "gray7" : $gray7,
-  "gray8" : $gray8,
-  "gray9" : $gray9,
-  "graya" : $graya,
-  "grayb" : $grayb,
-  "grayc" : $grayc,
-  "grayd" : $grayd,
-  "graye" : $graye,
-  "grayf5" : $grayf5,
-  "grayf8" : $grayf8,
-  "white" : $white,
-  "transparent" : $transparent,
+  "black" : var(--black),
+  "gray1" : var(--gray1),
+  "gray2" : var(--gray2),
+  "gray3" : var(--gray3),
+  "gray4" : var(--gray4),
+  "gray5" : var(--gray5),
+  "gray6" : var(--gray6),
+  "gray7" : var(--gray7),
+  "gray8" : var(--gray8),
+  "gray9" : var(--gray9),
+  "graya" : var(--graya),
+  "grayb" : var(--grayb),
+  "grayc" : var(--grayc),
+  "grayd" : var(--grayd),
+  "graye" : var(--graye),
+  "grayf5" : var(--grayf5),
+  "grayf8" : var(--grayf8),
+  "white" : var(--white),
+  "transparent" : var(--transparent),
   "disabled" : var(--disabled),
   "disabled_deep" : var(--disabled_deep),
 );
@@ -152,8 +184,8 @@ $main : (
   "primary" : var(--set-primary),
   "secondary" : var(--set-secondary),
   "tertiary" : var(--set-tertiary),
-  "black" : $black,
-  "white" : $white,
+  "black" : var(--set-black),
+  "white" : var(--set-white),
 );
 
 @for $i from 1 to 99 {

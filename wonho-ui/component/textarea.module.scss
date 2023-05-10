@@ -10,7 +10,7 @@
     resize: none;
     border: none ;
     border: 1px solid var(--textarea-otl) ;
-    // background-color: transparent !important;
+    background-color: var(--white);
     &.rect {
         border-radius: 0rem;
     }
