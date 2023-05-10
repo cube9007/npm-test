@@ -1,7 +1,7 @@
 @import "../css/variable";
 @import "../css/mixin";
 
-.checkbox {
+.radio {
     appearance: none;
     display: flex;
     align-items: center;
@@ -9,12 +9,13 @@
     margin: 0;
     &::after {
         content: '';
-        @include mask("checkbox.svg");
-        background-color: var(--checkbox);
+        @include mask("radio.svg");
+        background-color: var(--radio);
     }
     &:checked::after {
-        @include mask("checkbox-checked.svg");
+        @include mask("radio-checked.svg");
     }
+    
     &::before {
         content: '';
         @include noMask;
@@ -32,15 +33,16 @@
             &:checked::after {
                 background-color: $color;
             }
-            
         }
     }
+
     &:disabled {
         &::after,
         &:checked::after {
             background-color: var(--radio-disabled);
         }
     }
+
     // ripple
     @each $semantic, $color in $main {
         &.ripple-#{$semantic} {
@@ -52,51 +54,51 @@
 
     // size
     &.large {
-        width: var(--checkbox-size-large);
-        height: var(--checkbox-size-large);
+        width: var(--radio-size-large);
+        height: var(--radio-size-large);
         &::after {
-            width: var(--checkbox-size-large);
-            height: var(--checkbox-size-large);
+            width: var(--radio-size-large);
+            height: var(--radio-size-large);
         }
         &::before {
-            width: var(--checkbox-ripple-size-large);
-            height: var(--checkbox-ripple-size-large);
+            width: var(--radio-ripple-size-large);
+            height: var(--radio-ripple-size-large);
         }
     }
     &.medium {
-        width: var(--checkbox-size-medium);
-        height: var(--checkbox-size-medium);
+        width: var(--radio-size-medium);
+        height: var(--radio-size-medium);
         &::after {
-            width: var(--checkbox-size-medium);
-            height: var(--checkbox-size-medium);
+            width: var(--radio-size-medium);
+            height: var(--radio-size-medium);
         }
         &::before {
-            width: var(--checkbox-ripple-size-medium);
-            height: var(--checkbox-ripple-size-medium);
+            width: var(--radio-ripple-size-medium);
+            height: var(--radio-ripple-size-medium);
         }
     }
     &.small {
-        width: var(--checkbox-size-small);
-        height: var(--checkbox-size-small);
+        width: var(--radio-size-small);
+        height: var(--radio-size-small);
         &::after {
-            width: var(--checkbox-size-small);
-            height: var(--checkbox-size-small);
+            width: var(--radio-size-small);
+            height: var(--radio-size-small);
         }
         &::before {
-            width: var(--checkbox-ripple-size-small);
-            height: var(--checkbox-ripple-size-small);
+            width: var(--radio-ripple-size-small);
+            height: var(--radio-ripple-size-small);
         }
     }
     &.extraSmall {
-        width: var(--checkbox-size-extraSmall);
-        height: var(--checkbox-size-extraSmall);
+        width: var(--radio-size-extraSmall);
+        height: var(--radio-size-extraSmall);
         &::after {
-            width: var(--checkbox-size-extraSmall);
-            height: var(--checkbox-size-extraSmall);
+            width: var(--radio-size-extraSmall);
+            height: var(--radio-size-extraSmall);
         }
         &::before {
-            width: var(--checkbox-ripple-size-extraSmall);
-            height: var(--checkbox-ripple-size-extraSmall);
+            width: var(--radio-ripple-size-extraSmall);
+            height: var(--radio-ripple-size-extraSmall);
         }
     }
 

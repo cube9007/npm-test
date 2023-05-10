@@ -9,16 +9,8 @@
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    border-radius: var(--radius);
     transition: 0.5s;
     overflow: hidden;
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        transition: 0.5s;
-    }
     &:not(.disabled) {
         cursor: pointer;
     }
@@ -52,11 +44,16 @@
         }
     }
     // round
-    &.round {
-        border-radius: 1000rem;
-    }
-    &.rect {
-        border-radius: 0rem;
+    &.radius {
+        &-round {
+            border-radius: 1000rem;
+        }
+        &-rect {
+            border-radius: 0rem;
+        }
+        &-normal {
+            border-radius: var(--radius);
+        }
     }
     // shadow
     &.shadow {
@@ -162,6 +159,20 @@
                 &-#{$semantic}:hover {
                     color: $color;
                 }
+            }
+        }
+        &-radius {
+            &-round:hover {
+                border-radius: 1000rem;
+                transition: 2s;
+            }
+            &-rect:hover {
+                border-radius: 0rem;
+                transition: 2s;
+            }
+            &-normal:hover {
+                border-radius: var(--radius);
+                transition: 2s;
             }
         }
     }

@@ -39,3 +39,17 @@ body {
     -webkit-mask-image: url("./assets/radio-checked.svg");
   }
 }
+
+.btn {
+  width: 100px;
+  border-radius: var(--radius);
+  transition: 0.5s;
+  background: #000;
+  color: white;
+  &:hover {
+    border-radius: 100px;
+    background-color: white;
+    color: black;
+    transition: 2s;
+  }
+}

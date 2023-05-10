@@ -4,8 +4,7 @@ import styles from './button.module.scss';
 const Button = ({theme='primary', 
                 variant='normal', 
                 size='medium', 
-                radius, 
-                square, 
+                radius='normal', 
                 shadow, 
                 bg, 
                 otl, 
@@ -14,6 +13,7 @@ const Button = ({theme='primary',
                 hoverBg,
                 hoverOtl,
                 hoverColor,
+                hoverRadius,
                 disabled, 
                 className,
                 onClick, 
@@ -192,10 +192,9 @@ const Button = ({theme='primary',
       { 
         styles.button
         + ' ' + 
-        (radius == 'round' ? styles.round : 
-        radius == 'rect' ? styles.rect : '')
-        + ' ' +
-        (square ? styles.square : '')
+        (radius == 'round' ? styles['radius-round'] : 
+        radius == 'rect' ? styles['radius-rect'] : 
+        radius == 'normal' ? styles['radius-normal'] : '')
         + ' ' +
         (shadow ? styles.shadow : '')
         + ' ' +
@@ -212,6 +211,10 @@ const Button = ({theme='primary',
         (hoverOtlStyle(hoverOtl))
         + ' ' +
         (hoverColorStyle(hoverColor))
+        + ' ' +
+        (hoverRadius == 'round' ? styles['hover-radius-round'] : 
+        hoverRadius == 'rect' ? styles['hover-radius-rect'] : 
+        hoverRadius == 'normal' ? styles['hover-radius-normal'] : '')
         + ' ' +
         (size == 'large' ? styles.large :
         size == 'medium' ? styles.medium :

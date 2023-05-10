@@ -1,7 +1,7 @@
 import * as React from "react";
-import styles from './checkbox.module.scss';
+import styles from './radio.module.scss';
 
-const Checkbox = ({
+const Radio = ({
                 theme='primary',
                 size='medium',
                 color,
@@ -49,9 +49,9 @@ const Checkbox = ({
   }
   return (
     <>
-      <input type='checkbox' 
+      <input type="radio" 
         className={
-          styles.checkbox
+          styles.radio
           + ' ' +
           (colorStyle(color))
           + ' ' +
@@ -74,4 +74,4 @@ const Checkbox = ({
   );
 }
 
-export default Checkbox;
+export default Radio;
