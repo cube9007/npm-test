@@ -22,6 +22,10 @@ html {
     --tertiary_light: rgb(10,142,135);
     --tertiary_deep: rgb(38,206,196);
     --set-tertiary : 18,170,161;
+
+    --notification: rgb(237,46,46);
+    --success: rgb(14,218,108);
+    --warning: rgb(252,166,0);
   } 
   &[data-theme = "dark"] {
     background-color: rgb(0,0,0,0.8);
@@ -38,19 +42,21 @@ html {
     --set-tertiary : 56,227,217;
     --tertiary_light: rgb(15,176,167);
     --tertiary_deep: rgb(149,255,249);
+
+    --notification: rgb(250,84,84);
+    --success: rgb(70,233,145);
+    --warning: rgb(255,184,46);
   }
   // font
   --font: 'Inter', sans-serif;
   // radius
   --radius: 5rem;
   // color
-  
-
+  --black: rgb(var(--set-black));
+  --white: rgb(var(--set-white));
   --primary: rgb(var(--set-primary));
   --secondary: rgb(var(--set-secondary));
   --tertiary: rgb(var(--set-tertiary));
-  --black: rgb(var(--set-black));
-  --white: rgb(var(--set-white));
 
   --disabled : var(--grayc);
   --disabled_deep : var(--graya);
@@ -137,6 +143,10 @@ html {
   --radio-ripple-size-medium: calc(var(--radio-size-medium) * 2);
   --radio-ripple-size-small: calc(var(--radio-size-small) * 2);
   --radio-ripple-size-extraSmall: calc(var(--radio-size-extraSmall) * 2);
+
+  // badge
+  --badge-size: 16rem;
+  --badge-size-dot: 8rem;
 }
 
 $colors: (
@@ -149,6 +159,9 @@ $colors: (
   "tertiary" : var(--tertiary),
   "tertiary_light" : var(--tertiary_light),
   "tertiary_deep" : var(--tertiary_deep),
+  "notification": var(--notification),
+  "success": var(--success),
+  "warning": var(--warning),
   "black" : var(--black),
   "gray1" : var(--gray1),
   "gray2" : var(--gray2),

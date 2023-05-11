@@ -2,17 +2,17 @@ import * as React from "react";
 import styles from './radio.module.scss';
 
 const Radio = ({
-                theme='primary',
-                size='medium',
-                color,
-                ripple,
-                defaultChecked,
-                id,
-                name,
-                value,
-                disabled,
-                className,
-                }) => {
+    theme='primary',
+    size='medium',
+    color,
+    ripple,
+    defaultChecked,
+    id,
+    name,
+    value,
+    disabled,
+    className,
+  }) => {
   if (theme == 'primary') {color = color || 'primary'; ripple = ripple || 'primary'}
   else if (theme == 'primary_light') {color = color || 'primary_light'; ripple = ripple || 'primary_light'}
   else if (theme == 'primary_deep') {color = color || 'primary_deep'; ripple = ripple || 'primary_deep'}

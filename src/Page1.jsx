@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, TextField, TextArea, Checkbox, Radio } from '../wonho-ui/component';
+import { Button, TextField, TextArea, Checkbox, Radio, Badge } from '../wonho-ui/component';
 
 function Page1() {
   const LightMode = () => {
@@ -10,7 +10,7 @@ function Page1() {
   }
   return (
     <>
-      <div className='flexCenter flexColumn bgc-black_10p gap10'>
+    <div className='flexCenter flexColumn bgc-black_10p gap10'>
       <div className='flexCenter gap10'>
         <TextField 
           size='extraSmall'
@@ -61,6 +61,14 @@ function Page1() {
         <Button size='medium' variant='contained' shadow theme='gray6'>
           Button
         </Button>
+      </div>
+      <div className='flex gap10 alignCenter'>
+        <div className='relative'>
+          <Button size='small' square variant='contained' radius='round'>
+            <div className='size14 b'>B</div>
+          </Button>
+          <Badge >1</Badge>
+        </div>
       </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>

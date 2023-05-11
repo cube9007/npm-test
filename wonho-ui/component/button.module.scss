@@ -104,9 +104,9 @@
         height: var(--btn-size-medium);
         padding: var(--btn-p-medium);
         &.square {
-            width: var(--btn-size-medium !important);
-            max-width: var(--btn-size-medium !important);
-            min-width: var(--btn-size-medium !important);
+            width: var(--btn-size-medium);
+            max-width: var(--btn-size-medium);
+            min-width: var(--btn-size-medium);
             padding: 0;
         }
     }
@@ -115,9 +115,9 @@
         height: var(--btn-size-small);
         padding: var(--btn-p-small);
         &.square {
-            width: var(--btn-size-small !important);
-            max-width: var(--btn-size-small !important);
-            min-width: var(--btn-size-small !important);
+            width: var(--btn-size-small);
+            max-width: var(--btn-size-small);
+            min-width: var(--btn-size-small);
             padding: 0;
         }
     }
@@ -126,9 +126,9 @@
         height: var(--btn-size-extraSmall);
         padding: var(--btn-p-extraSmall);
         &.square {
-            width: var(--btn-size-extraSmall !important);
-            max-width: var(--btn-size-extraSmall !important);
-            min-width: var(--btn-size-extraSmall !important);
+            width: var(--btn-size-extraSmall);
+            max-width: var(--btn-size-extraSmall);
+            min-width: var(--btn-size-extraSmall);
             padding: 0;
         }
     }

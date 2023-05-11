@@ -1,23 +1,26 @@
 import * as React from 'react';
 import styles from './button.module.scss';
 
-const Button = ({theme='primary', 
-                variant='normal', 
-                size='medium', 
-                radius='normal', 
-                shadow, 
-                bg, 
-                otl, 
-                color, 
-                ripple,
-                hoverBg,
-                hoverOtl,
-                hoverColor,
-                hoverRadius,
-                disabled, 
-                className,
-                onClick, 
-                children }) => {
+const Button = ({
+    theme='primary', 
+    variant='normal', 
+    size='medium', 
+    radius='normal', 
+    square,
+    shadow, 
+    bg, 
+    otl, 
+    color, 
+    ripple,
+    hoverBg,
+    hoverOtl,
+    hoverColor,
+    hoverRadius,
+    disabled, 
+    className,
+    onClick, 
+    children 
+  }) => {
   // variant 조건문
   if (variant == 'contained') {
     otl = otl || 'transparent'
@@ -188,13 +191,14 @@ const Button = ({theme='primary',
 
   return (
     <>
-      <button className=
-      { 
+      <button className={ 
         styles.button
         + ' ' + 
         (radius == 'round' ? styles['radius-round'] : 
         radius == 'rect' ? styles['radius-rect'] : 
         radius == 'normal' ? styles['radius-normal'] : '')
+        + ' ' +
+        (square ? styles.square : '')
         + ' ' +
         (shadow ? styles.shadow : '')
         + ' ' +
