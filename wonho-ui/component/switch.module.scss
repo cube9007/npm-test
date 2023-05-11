@@ -1,0 +1,73 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.switch {
+    appearance: none;
+    @include noMask;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    background-color: var(--switch-unchecked);
+    padding: var(--switch-padding);
+    transition: 0.3s;
+    &:checked {
+        &::after {
+            margin-left: var(--switch-ml);
+        }
+    }
+    &::after {
+        content: '';
+        @include noMask;
+        background-color: white;
+        display: flex;
+        margin-left: 0rem;
+        width: var(--switch-btn-width);
+        height: var(--switch-btn-height);
+        transition: 0.3s;
+    }
+
+    &.radius {
+        &-rect {
+            border-radius: 0rem;
+            &::after {
+                border-radius: 0rem;
+            }
+        }
+        &-normal {
+            border-radius: var(--radius);
+            &::after {
+                border-radius: calc(var(--radius) - var(--switch-padding));
+            }
+        }
+        &-round {
+            border-radius: 100rem;
+            &::after {
+                border-radius: 100rem;
+            }
+        }
+    }
+    // color
+    @each $semantic, $color in $colors {
+        &.color-#{$semantic} {
+            &:checked {
+                background-color: $color;
+            }
+        }
+    }
+
+    &:disabled {
+        background-color: var(--switch-disabled);
+        &:checked {
+            background-color: var(--switch-disabled);
+        }
+    }
+
+    &::before {
+        content: '';
+        display: none;
+    }
+    &:active::before {
+        display: none;
+        width: 0rem;
+        height: 0rem;
+    }
+}

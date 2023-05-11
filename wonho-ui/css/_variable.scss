@@ -144,6 +144,16 @@ html {
   --radio-ripple-size-small: calc(var(--radio-size-small) * 2);
   --radio-ripple-size-extraSmall: calc(var(--radio-size-extraSmall) * 2);
 
+  // switch
+  --switch-width: 24rem;
+  --switch-height: 14rem;
+  --switch-btn-width: 10rem;
+  --switch-btn-height: 10rem;
+  --switch-padding: calc((var(--switch-height) - var(--switch-btn-height)) / 2);
+  --switch-ml: calc(var(--switch-width) - (var(--switch-padding) * 2) - var(--switch-btn-width));
+  --switch-unchecked : var(--gray9);
+  --switch-disabled : var(--grayc);
+
   // badge
   --badge-size: 16rem;
   --badge-size-dot: 10rem;

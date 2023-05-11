@@ -1,5 +1,13 @@
 import * as React from 'react';
-import { Button, TextField, TextArea, Checkbox, Radio, Badge } from '../wonho-ui/component';
+import { 
+  Button, 
+  TextField, 
+  TextArea, 
+  Checkbox, 
+  Radio, 
+  Switch, 
+  Badge 
+} from '../wonho-ui/component';
 
 function Page1() {
   const LightMode = () => {
@@ -83,16 +91,24 @@ function Page1() {
             <div className='size14 b'>B</div>
           </Button>
         </Badge>
-        <Badge content='new' max={99}>
+        <Badge radius='rect' content='new' max={99}>
           <Button size='large' square variant='contained' radius='round'>
             <div className='size14 b'>B</div>
           </Button>
         </Badge>
         <Badge color='success' dot>
-          <Button size='large' square variant='outlined' radius='round'>
+          <Button size='large' square variant='contained' radius='round'>
             <div className='size14 b'>B</div>
           </Button>
         </Badge>
+      </div>
+      <div className='flex gap10 alignCenter'>
+        <Switch radius='rect'/>
+        <Switch radius='normal'/>
+        <Switch />
+        <Switch defaultChecked/>
+        <Switch disabled/>
+        <Switch defaultChecked disabled/>
       </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>
