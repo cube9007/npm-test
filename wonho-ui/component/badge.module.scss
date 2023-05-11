@@ -14,21 +14,34 @@
     &-wrap {
         display: flex;
         align-items: center;
+        position: relative;
     }
     &.vertical {
         &-top {
             top: -2rem;
+            &.dot {
+                top: 2rem;
+            }
         }
         &-bottom {
             bottom: -2rem;
+            &.dot {
+                bottom: 2rem;
+            }
         }
     }
     &.horizontal {
         &-left {
             right: calc(100% + 2rem - var(--badge-size));
+            &.dot {
+                right: calc(100% - 2rem - var(--badge-size-dot));
+            }
         }
         &-right {
             left: calc(100% + 2rem - var(--badge-size));
+            &.dot {
+                left: calc(100% - 2rem - var(--badge-size-dot));
+            }
         }
     }
     &.radius {
@@ -48,9 +61,11 @@
             background-color: $color;
         }
     }
-    .dot {
+    &.dot {
+        min-width: var(--badge-size-dot);
         width: var(--badge-size-dot);
         height: var(--badge-size-dot);
         border-radius: var(--badge-size-dot);
+        padding: 0;
     }
 }

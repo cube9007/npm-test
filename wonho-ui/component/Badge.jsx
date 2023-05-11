@@ -6,7 +6,9 @@ const Badge = ({
     radius='round',
     vertical='top',
     horizontal='right',
+    max,
     dot,
+    content,
     children,
     id,
     className,
@@ -14,8 +16,17 @@ const Badge = ({
   const colorStyle = (color) => {
     return color ? styles[`color-${color}`] : '';
   }
+  if (max) {
+    content > max 
+    ? 
+    content = max + '+'
+    :
+    content
+  }
   return (
     <>
+    <div className={styles['badge-wrap']}>
+      {children}
       <div className={
         styles.badge
         + ' ' +
@@ -34,9 +45,12 @@ const Badge = ({
         (dot ? styles.dot : '')
         + ' ' +
         (className ? className : '')
-      }>
-        {dot ? '' : children}
+      }
+        id={id}
+      >
+        {dot ? '' : content}
       </div>
+    </div>
     </>
   );
 }

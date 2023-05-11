@@ -63,12 +63,36 @@ function Page1() {
         </Button>
       </div>
       <div className='flex gap10 alignCenter'>
-        <div className='relative'>
+        <Badge content={1}>
           <Button size='small' square variant='contained' radius='round'>
             <div className='size14 b'>B</div>
           </Button>
-          <Badge >1</Badge>
-        </div>
+        </Badge>
+        <Badge dot >
+          <Button size='small' square variant='contained' radius='round'>
+            <div className='size14 b'>B</div>
+          </Button>
+        </Badge>
+        <Badge content={1}>
+          <Button size='medium' square variant='contained' radius='round'>
+            <div className='size14 b'>B</div>
+          </Button>
+        </Badge>
+        <Badge color='success' dot>
+          <Button size='medium' square variant='outlined' radius='round'>
+            <div className='size14 b'>B</div>
+          </Button>
+        </Badge>
+        <Badge content='new' max={99}>
+          <Button size='large' square variant='contained' radius='round'>
+            <div className='size14 b'>B</div>
+          </Button>
+        </Badge>
+        <Badge color='success' dot>
+          <Button size='large' square variant='outlined' radius='round'>
+            <div className='size14 b'>B</div>
+          </Button>
+        </Badge>
       </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>
