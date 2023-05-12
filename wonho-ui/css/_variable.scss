@@ -78,6 +78,10 @@ html {
   --grayf5: rgb(var(--set-black), 0.04);
   --grayf8: rgb(var(--set-black), 0.027);
   --transparent: rgb(var(--set-black), 0);
+  --white3: rgb(var(--set-white), 0.8);
+  --white6: rgb(var(--set-white), 0.6);
+  --white9: rgb(var(--set-white), 0.4);
+  --whitec: rgb(var(--set-white), 0.2);
 
   // btn
   --btn-size-large: 44rem;
@@ -157,6 +161,16 @@ html {
   // badge
   --badge-size: 16rem;
   --badge-size-dot: 10rem;
+
+  // chip
+  --chip-p-large : 15rem;
+  --chip-p-medium : 10rem;
+  --chip-p-small : 5rem;
+  --chip-p-extraSmall : 5rem;
+  --chip-btnp-large : 7rem;
+  --chip-btnp-medium : 5rem;
+  --chip-btnp-small : 5rem;
+  --chip-btnp-extraSmall : 3rem;
 }
 
 $colors: (
@@ -190,6 +204,10 @@ $colors: (
   "grayf5" : var(--grayf5),
   "grayf8" : var(--grayf8),
   "white" : var(--white),
+  "white3" : var(--white3),
+  "white6" : var(--white6),
+  "white9" : var(--white9),
+  "whitec" : var(--whitec),
   "transparent" : var(--transparent),
   "disabled" : var(--disabled),
   "disabled_deep" : var(--disabled_deep),

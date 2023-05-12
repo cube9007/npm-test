@@ -1,0 +1,144 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.chip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // bg
+    @each $semantic, $color in $colors {
+        &.bg-#{$semantic} {
+            background-color: $color;
+        }
+    }
+    // otl
+    @each $semantic, $color in $colors {
+        &.otl-#{$semantic} {
+            border: 1px solid $color;
+        }
+    }
+    // color
+    @each $semantic, $color in $colors {
+        &.color-#{$semantic} {
+            color: $color;
+        }
+    }
+
+    // radius
+    &.radius {
+        &-normal {
+            border-radius: var(--radius);
+        }
+        &-round {
+            border-radius: 100rem;
+        }
+    }
+
+    // size
+    &.size {
+        &-large {
+            height: 38rem;
+            font-size: 14rem;
+            gap: 10rem;
+            padding: 0 var(--chip-p-large);
+        }
+        &-medium {
+            height: 32rem;
+            font-size: 12rem;
+            gap: 10rem;
+            padding: 0 var(--chip-p-medium);
+        }
+        &-small {
+            height: 26rem;
+            font-size: 12rem;
+            gap: 5rem;
+            padding: 0 var(--chip-p-small);
+        }
+        &-extraSmall {
+            height: 20rem;
+            font-size: 10rem;
+            gap: 5rem;
+            padding: 0 var(--chip-p-extraSmall);
+        }
+    }
+    &.deletable {
+        &-left {
+            &.size {
+                &-large {
+                    padding: 0 var(--chip-p-large) 0 var(--chip-btnp-large);
+                }
+                &-medium {
+                    padding: 0 var(--chip-p-medium) 0 var(--chip-btnp-medium);
+                }
+                &-small {
+                    padding: 0 var(--chip-p-small);
+                }
+                &-extraSmall {
+                    padding: 0 var(--chip-p-extraSmall) 0 var(--chip-btnp-extraSmall);
+                }
+            }
+        }
+        &-right {
+            &.size {
+                &-large {
+                    padding: 0 var(--chip-btnp-large) 0 var(--chip-p-large);
+                }
+                &-medium {
+                    padding: 0 var(--chip-btnp-medium) 0 var(--chip-p-medium);
+                }
+                &-small {
+                    padding: 0 var(--chip-p-small);
+                }
+                &-extraSmall {
+                    padding: 0 var(--chip-btnp-extraSmall) 0 var(--chip-p-extraSmall);
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.size {
+        &-large {
+            width: 24rem ;
+            height: 24rem !important;
+            border-radius: 100rem !important;
+            padding: 0 !important;
+        }
+        &-medium {
+            width: 20rem ;
+            height: 20rem !important;
+            border-radius: 100rem !important;
+            padding: 0 !important;
+        }
+        &-small {
+            width: 16rem ;
+            height: 16rem !important;
+            border-radius: 100rem !important;
+            padding: 0 !important;
+        }
+        &-extraSmall {
+            width: 14rem ;
+            height: 14rem !important;
+            border-radius: 100rem !important;
+            padding: 0 !important;
+        }
+    }
+    &>.icon {
+        @include mask('x-circle.svg');
+        width: 100%;
+        height: 100%;
+        &.outlined {
+            @include mask('x.svg');
+        }
+        @each $semantic, $color in $colors {
+            &.bg-#{$semantic} {
+                background-color: $color;
+            }
+        }
+    }
+}
