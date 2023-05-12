@@ -1,0 +1,82 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.tree {
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex-grow: 1;
+    }
+    &-summary {
+        height: var(--tree-h);
+        font-size: var(--tree-font-size);
+        color: var(--tree-color);
+        padding: var(--tree-p);
+        display: flex;
+        gap: var(--tree-gap);
+        position: relative;
+        align-items: center;
+        justify-content: start;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.5s;
+        &:hover {
+            background-color: var(--tree-hover);
+        }
+        &>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            &.deg90 {
+                transform: rotate(90deg);
+            }
+            &.deg180 {
+                transform: rotate(180deg);
+            }
+            &.deg270 {
+                transform: rotate(270deg);
+            }
+            &>.arrow {
+                @include mask('arrow-right.svg');
+                width: 20rem !important;
+                height: 20rem !important;
+                background-color: var(--gray6);
+                transition: 0.5s;
+            }
+        }
+    }
+    &-detail {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20rem;
+        overflow: hidden;
+        &.close {
+            max-height: 0;
+            transition-delay: 0s;
+        }
+    }
+    &-item {
+        height: 36rem;
+        font-size: 14rem;
+        color: var(--gray6);
+        padding: 0rem 10rem;
+        display: flex;
+        gap: 10rem;
+        position: relative;
+        align-items: center;
+        justify-content: start;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            background-color: var(--grayd);
+        }
+        &>.item {
+            @include mask('file.svg');
+            width: 20rem;
+            height: 20rem;
+            background-color: var(--gray6);
+        }
+    }
+}

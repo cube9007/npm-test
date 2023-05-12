@@ -7,7 +7,8 @@ import {
   Checkbox, 
   Radio, 
   Switch, 
-  Badge 
+  Badge,
+  Tree,
 } from '../wonho-ui/component';
 
 function Page1() {
@@ -183,6 +184,25 @@ function Page1() {
         <Chip theme='graye'  radius='normal' variant='normal' size='medium' label='Chip' deletable='right'/>
         <Chip theme='grayf5' radius='normal' variant='normal' size='medium' label='Chip' deletable='right'/>
         <Chip theme='grayf8' radius='normal' variant='normal' size='medium' label='Chip' deletable='right'/>
+      </div>
+      <div className='flex w500 gap10 alignCenter'>
+        <Tree title='Title'
+          icon={<p>P</p>}
+          iconRotate='deg180'
+        >
+          <Tree title='Title'>
+            <Tree item title='item' />
+            <Tree item title='item' />
+            <Tree item title='item' />
+            <Tree item title='item' />
+          </Tree>
+          <Tree title='Title'>
+            <Tree item title='item' />
+            <Tree item title='item' />
+            <Tree item title='item' />
+            <Tree item title='item' />
+          </Tree>
+        </Tree>
       </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>

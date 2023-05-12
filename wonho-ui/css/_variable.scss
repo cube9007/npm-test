@@ -171,6 +171,14 @@ html {
   --chip-btnp-medium : 5rem;
   --chip-btnp-small : 5rem;
   --chip-btnp-extraSmall : 3rem;
+
+  // tree
+  --tree-h : 36rem;
+  --tree-font-size: 14rem;
+  --tree-color : var(--gray6);
+  --tree-p: 0rem 10rem;
+  --tree-gap: 10rem;
+  --tree-hover: var(--grayd);
 }
 
 $colors: (
