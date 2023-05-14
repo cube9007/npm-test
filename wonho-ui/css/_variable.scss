@@ -174,10 +174,15 @@ html {
 
   // tree
   --tree-h : 36rem;
+  --tree-item-h : 36rem;
   --tree-font-size: 14rem;
+  --tree-item-font-size: 14rem;
   --tree-color : var(--gray6);
   --tree-p: 0rem 10rem;
+  --tree-detail-pl: 20rem;
+  --tree-item-p: 0rem 10rem;
   --tree-gap: 10rem;
+  --tree-item-gap: 10rem;
   --tree-hover: var(--grayd);
 }
 

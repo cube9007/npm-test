@@ -50,27 +50,34 @@
     &-detail {
         display: flex;
         flex-direction: column;
-        padding-left: 20rem;
+        padding-left: var(--tree-detail-pl);
         overflow: hidden;
+        transition: max-height 1s ease-out;
+        max-height: 100vh;
         &.close {
             max-height: 0;
+            transition: max-height 0.3s ease-out;
             transition-delay: 0s;
         }
     }
     &-item {
-        height: 36rem;
-        font-size: 14rem;
+        height: var(--tree-item-h);
+        font-size: (--tree-item-font-size);
         color: var(--gray6);
-        padding: 0rem 10rem;
+        padding: var(--tree-item-p);
         display: flex;
-        gap: 10rem;
+        gap: var(--tree-item-gap);
         position: relative;
         align-items: center;
         justify-content: start;
         cursor: pointer;
         transition: 0.5s;
+        &::after {
+            content: '';
+            height: var(--tree-item-h);
+        }
         &:hover {
-            background-color: var(--grayd);
+            background-color: var(--tree-hover);
         }
         &>.item {
             @include mask('file.svg');

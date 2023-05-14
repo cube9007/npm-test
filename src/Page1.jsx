@@ -190,12 +190,10 @@ function Page1() {
           icon={<p>P</p>}
           iconRotate='deg180'
         >
-          <Tree title='Title'>
-            <Tree item title='item' />
-            <Tree item title='item' />
-            <Tree item title='item' />
-            <Tree item title='item' />
-          </Tree>
+          <Tree item title='item' />
+          <Tree item title='item' />
+          <Tree item title='item' />
+          <Tree item title='item' />
           <Tree title='Title'>
             <Tree item title='item' />
             <Tree item title='item' />
