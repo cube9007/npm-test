@@ -10,6 +10,7 @@ import {
   Badge,
   Accordion,
   Tree,
+  Popup,
 } from '../wonho-ui/component';
 
 function Page1() {
@@ -18,6 +19,10 @@ function Page1() {
   }
   const DarkMode = () => {
     document.documentElement.setAttribute("data-theme", "dark");
+  }
+  const [popup, setPopup] = React.useState(false);
+  const PopupClick = () => {
+    setPopup(true)
   }
   return (
     <>
@@ -224,6 +229,10 @@ function Page1() {
           </Tree>
         </Tree>
       </div>
+      <div className='flex gap10'>
+        <Button variant='contained' size='large' onClick={PopupClick}>Modal</Button>
+        <Button variant='contained' size='large' > Btn</Button>
+      </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>
         <div className='bgc-black w100 h100'/>
@@ -235,6 +244,15 @@ function Page1() {
         <div className='bgc-tertiary w100 h100'/>
       </div>
     </div>
+    <Popup open={popup} onClose={()=>{setPopup(false)}}>
+      <div className='flexColumn w400 p20 gap30 size14'>
+        안녕하세요
+        <div className='flexBetween gap10'>
+          <Button size='small' variant='outlined' onClick={()=>{setPopup(false)}}>cancel</Button>
+          <Button size='small' variant='contained'>OK</Button>
+        </div>
+      </div>
+    </Popup>
     </>
   )
 }

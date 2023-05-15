@@ -193,6 +193,12 @@ html {
   --tree-item-font-size: 14rem;
   --tree-item-p: 0rem 10rem;
   --tree-item-gap: 10rem;
+
+  // popup
+  --popup-bg : var(--white);
+  --popup-otl : 1px solid var(--grayc);
+  --popup-z: 100;
+  --backdrop : var(--gray9);
 }
 
 $colors: (

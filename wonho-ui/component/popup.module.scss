@@ -1,0 +1,35 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.popup {
+    background-color: var(--white);
+    border: 1px solid var(--grayc);
+    position: absolute;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    &-wrap{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: var(--popup-z);
+        background-color: var(--backdrop);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        &.open {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backdrop);
+}
