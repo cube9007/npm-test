@@ -8,6 +8,7 @@ import {
   Radio, 
   Switch, 
   Badge,
+  Accordion,
   Tree,
 } from '../wonho-ui/component';
 
@@ -185,20 +186,41 @@ function Page1() {
         <Chip theme='grayf5' radius='normal' variant='normal' size='medium' label='Chip' deletable='right'/>
         <Chip theme='grayf8' radius='normal' variant='normal' size='medium' label='Chip' deletable='right'/>
       </div>
-      <div className='flex w500 gap10 alignCenter'>
-        <Tree title='Title'
+      <div className='flexColumn w500 gap10 alignCenter'>
+        <Accordion wrap>
+          <Accordion title='Accordion-Title' icon={<>P</>} iconRotate='deg180'>
+            <div className='m10 flexColumn otl-grayc radius'>
+              <Accordion title='Accordion-Title' >
+                asdasd
+              </Accordion>
+              <div className='width100 h1 bgc-grayc'/>
+              <Accordion title='Accordion-Title' >
+                asdasd
+              </Accordion>
+              <div className='width100 h1 bgc-grayc'/>
+              <Accordion title='Accordion-Title' >
+                asdasd
+              </Accordion>
+              <div className='width100 h1 bgc-grayc'/>
+              <Accordion title='Accordion-Title' >
+                asdasd
+              </Accordion>
+            </div>
+          </Accordion>
+        </Accordion>
+        <Tree title='Tree-Title'
           icon={<p>P</p>}
           iconRotate='deg180'
         >
-          <Tree item title='item' />
-          <Tree item title='item' />
-          <Tree item title='item' />
-          <Tree item title='item' />
-          <Tree title='Title'>
-            <Tree item title='item' />
-            <Tree item title='item' />
-            <Tree item title='item' />
-            <Tree item title='item' />
+          <Tree item title='Tree-item' />
+          <Tree item title='Tree-item' />
+          <Tree item title='Tree-item' />
+          <Tree item title='Tree-item' />
+          <Tree title='Tree-Title'>
+            <Tree item title='Tree-item' />
+            <Tree item title='Tree-item' />
+            <Tree item title='Tree-item' />
+            <Tree item title='Tree-item' />
           </Tree>
         </Tree>
       </div>

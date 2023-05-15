@@ -19,12 +19,8 @@ const Tree = ({
     <>
     {
       item ?
-      <div className=
-        {
-          styles['tree-item'] 
-          + ' ' + 
-          (className ? className : '')
-        }
+      <div 
+        className={styles['tree-item'] + ' ' + (className ? className : '')}
         id={id}
         onClick={onClick}
       >

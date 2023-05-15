@@ -172,18 +172,27 @@ html {
   --chip-btnp-small : 5rem;
   --chip-btnp-extraSmall : 3rem;
 
+  // accordion
+  --accordion-otl: 1px solid var(--grayc);
+  --accordion-h : 36rem;
+  --accordion-font-size: 14rem;
+  --accordion-color : var(--gray6);
+  --accordion-p: 0rem 10rem;
+  --accordion-gap: 10rem;
+  --accordion-hover: var(--grayd);
+
   // tree
   --tree-h : 36rem;
-  --tree-item-h : 36rem;
   --tree-font-size: 14rem;
-  --tree-item-font-size: 14rem;
   --tree-color : var(--gray6);
   --tree-p: 0rem 10rem;
-  --tree-detail-pl: 20rem;
-  --tree-item-p: 0rem 10rem;
   --tree-gap: 10rem;
-  --tree-item-gap: 10rem;
   --tree-hover: var(--grayd);
+  --tree-detail-pl: 20rem;
+  --tree-item-h : 36rem;
+  --tree-item-font-size: 14rem;
+  --tree-item-p: 0rem 10rem;
+  --tree-item-gap: 10rem;
 }
 
 $colors: (
