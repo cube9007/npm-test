@@ -12,6 +12,7 @@ import {
   Tree,
   Popup,
   Popover,
+  Backdrop,
 } from '../wonho-ui/component';
 
 function Page1() {
@@ -22,12 +23,16 @@ function Page1() {
     document.documentElement.setAttribute("data-theme", "dark");
   }
   const [popup, setPopup] = React.useState(false);
-  const PopupClick = () => {
+  const PopupOpen = () => {
     setPopup(true)
   }
   const [popover, setPopover] = React.useState(false);
   const PopoverOpen = () => {
     setPopover(true)
+  }
+  const [backdrop, setBackdrop] = React.useState(false);
+  const BackdropOpen = () => {
+    setBackdrop(true)
   }
   return (
     <>
@@ -236,9 +241,9 @@ function Page1() {
         </Tree>
       </div>
       <div className='flex gap10'>
-        <Button variant='contained' size='large' onClick={PopupClick}>Popup</Button>
+        <Button className='w200' variant='contained' size='large' onClick={PopupOpen}>Popup</Button>
         <div className='relative'>
-          <Button variant='contained' size='large' onClick={PopoverOpen}> Popover </Button>
+          <Button className='w200' variant='contained' size='large' onClick={PopoverOpen}> Popover </Button>
           <Popover open={popover} onClose={()=>{setPopover(false)}}>
             <div className='flexColumn w400 p20 gap30 size14'>
               안녕하세요
@@ -249,6 +254,7 @@ function Page1() {
             </div>
           </Popover>
         </div>
+        <Button className='w200' variant='contained' size='large' onClick={BackdropOpen}>Backdrop</Button>
       </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>
@@ -270,6 +276,9 @@ function Page1() {
         </div>
       </div>
     </Popup>
+    <Backdrop open={backdrop} onClose={()=>{setBackdrop(false)}}>
+      안녕하세요
+    </Backdrop>
     </>
   )
 }
