@@ -83,6 +83,9 @@ html {
   --white9: rgb(var(--set-white), 0.4);
   --whitec: rgb(var(--set-white), 0.2);
 
+  --shadow: 0 0 8rem 0 var(--grayc);
+  --backdrop : var(--gray9);
+
   // btn
   --btn-size-large: 44rem;
   --btn-size-medium: 34rem;
@@ -96,7 +99,7 @@ html {
   --btn-p-medium: 0 20rem;
   --btn-p-small: 0 10rem;
   --btn-p-extraSmall: 0 5rem;
-  --btn-shadow : 0 0 8rem 0 var(--grayc);
+  --btn-shadow : var(--shadow);
 
   // textfield
   --textfield-size-large: 44rem;
@@ -198,7 +201,12 @@ html {
   --popup-bg : var(--white);
   --popup-otl : 1px solid var(--grayc);
   --popup-z: 100;
-  --backdrop : var(--gray9);
+
+  // popover
+  --popover-bg : var(--white);
+  --popover-otl : 1px solid var(--grayc);
+  --popover-z: 100;
+  --popover-shadow : var(--shadow);
 }
 
 $colors: (

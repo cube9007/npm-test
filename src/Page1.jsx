@@ -11,6 +11,7 @@ import {
   Accordion,
   Tree,
   Popup,
+  Popover,
 } from '../wonho-ui/component';
 
 function Page1() {
@@ -23,6 +24,10 @@ function Page1() {
   const [popup, setPopup] = React.useState(false);
   const PopupClick = () => {
     setPopup(true)
+  }
+  const [popover, setPopover] = React.useState(false);
+  const PopoverOpen = () => {
+    setPopover(true)
   }
   return (
     <>
@@ -221,8 +226,9 @@ function Page1() {
           <Tree item title='Tree-item' />
           <Tree item title='Tree-item' />
           <Tree item title='Tree-item' />
+          <Tree item title='Tree-item' />
           <Tree title='Tree-Title'>
-            <Tree item title='Tree-item' />
+            
             <Tree item title='Tree-item' />
             <Tree item title='Tree-item' />
             <Tree item title='Tree-item' />
@@ -230,8 +236,19 @@ function Page1() {
         </Tree>
       </div>
       <div className='flex gap10'>
-        <Button variant='contained' size='large' onClick={PopupClick}>Modal</Button>
-        <Button variant='contained' size='large' > Btn</Button>
+        <Button variant='contained' size='large' onClick={PopupClick}>Popup</Button>
+        <div className='relative'>
+          <Button variant='contained' size='large' onClick={PopoverOpen}> Popover </Button>
+          <Popover open={popover} onClose={()=>{setPopover(false)}}>
+            <div className='flexColumn w400 p20 gap30 size14'>
+              안녕하세요
+              <div className='flexBetween gap10'>
+                <Button size='small' variant='outlined' onClick={()=>{setPopover(false)}}>cancel</Button>
+                <Button size='small' variant='contained'>OK</Button>
+              </div>
+            </div>
+          </Popover>
+        </div>
       </div>
       <div className='flexCenter gap10'>
         <div className='bgc-black_10p w100 h100'/>
