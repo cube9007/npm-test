@@ -1,0 +1,42 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.loading {
+    animation: rotate 0.7s linear forwards;
+    animation-direction: normal;
+    animation-iteration-count:infinite;
+    &-content {
+        fill: none;
+        stroke-linecap: round;
+        animation: lineMove 1s ease-in forwards;
+        animation-direction:alternate-reverse;
+        animation-iteration-count:infinite;
+        &.color {
+            @each $semantic, $color in $colors {
+                &-#{$semantic} {
+                    stroke: $color;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    to { 
+      rotate: 0;
+    }
+    from {
+      rotate: -360deg;
+    }
+}
+
+@keyframes lineMove {
+    to { 
+      stroke-dasharray: 130;
+      stroke-dashoffset: 0;
+    }
+    from {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 50;
+    }
+}

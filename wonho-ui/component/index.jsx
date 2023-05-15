@@ -11,3 +11,4 @@ export { default as Tree } from "./Tree";
 export { default as Popup } from "./Popup";
 export { default as Popover } from "./Popover";
 export { default as Backdrop } from "./Backdrop";
+export { default as Loading } from "./Loading";

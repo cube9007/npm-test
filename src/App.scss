@@ -8,10 +8,6 @@
   border: 1px solid red;
 }
 
-.searchbar {
-  padding: 0px 30px !important;
-}
-
 .icon {
   position: absolute;
   top: calc(50% - 6px);
@@ -46,7 +42,10 @@ body {
     -webkit-mask-image: url("./assets/radio-checked.svg");
   }
 }
-
+.searchbar {
+  margin-right: -39rem;
+  padding-right: 44rem !important;
+}
 .btn {
   width: 100px;
   border-radius: var(--radius);
