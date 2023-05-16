@@ -15,6 +15,7 @@ import {
   Backdrop,
   Loading,
   Location,
+  Pagination,
 } from '../wonho-ui/component';
 
 function Page1() {
@@ -198,6 +199,12 @@ function Page1() {
         icon={<p>I</p>}
       />
     </div>
+    <div className='flexCenter mt20 gap10'>
+      <Pagination max={20} color='primary' endBtn={false} size='large'/>
+      <Pagination max={20} color='secondary' endBtn={false} size='medium'/>
+      <Pagination max={20} color='tertiary' endBtn={false} size='small'/>
+      <Pagination max={20} color='black' endBtn={false} size='extraSmall'/>
+    </div>
     <Popup open={popup} onClose={()=>{setPopup(false)}}>
       <div className='flexColumn w400 p20 gap30 size14'>
         안녕하세요
@@ -207,7 +214,6 @@ function Page1() {
         </div>
       </div>
     </Popup>
-    
 
     <Backdrop open={backdrop} onClose={()=>{setBackdrop(false)}}>
       <Loading />

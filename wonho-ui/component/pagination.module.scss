@@ -1,0 +1,64 @@
+@import "../css/variable";
+@import '../css//mixin';
+
+.pagination {
+    &-wrap {
+        display: flex;
+        gap: var(--pagination-gap);
+        align-items: center;
+    }
+    
+    &-left {
+        @include mask('pagination-left.svg');
+        width: 7.41rem;
+        height: 12rem;
+        background-color: var(--gray6);
+        &.disabled {
+            background-color: var(--grayc);
+        }
+        &-end {
+            @include mask('pagination-left-end.svg');
+            width: 12rem;
+            height: 12rem;
+            background-color: var(--gray6);
+            &.disabled {
+                background-color: var(--grayc);
+            }
+        }
+    }
+    &-right {
+        @include mask('pagination-left.svg');
+        transform: rotate(180deg);
+        width: 7.41rem;
+        height: 12rem;
+        background-color: var(--gray6);
+        &.disabled {
+            background-color: var(--grayc);
+        }
+        &-end {
+            @include mask('pagination-left-end.svg');
+            transform: rotate(180deg);
+            width: 12rem;
+            height: 12rem;
+            background-color: var(--gray6);
+            &.disabled {
+                background-color: var(--grayc);
+            }
+        }
+    }
+    &-btn {
+        &.color {
+            @each $semantic, $color in $main {
+                &-#{$semantic} {
+                    &.active {
+                        background-color: rgb($color, 0.3);
+                        &:hover {
+                            background-color: rgb($color, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

@@ -13,3 +13,4 @@ export { default as Popover } from "./Popover";
 export { default as Backdrop } from "./Backdrop";
 export { default as Loading } from "./Loading";
 export { default as Location } from "./Location";
+export { default as Pagination } from "./Pagination";
