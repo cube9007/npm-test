@@ -14,6 +14,7 @@ import {
   Popover,
   Backdrop,
   Loading,
+  Location,
 } from '../wonho-ui/component';
 
 function Page1() {
@@ -186,6 +187,17 @@ function Page1() {
         <div className='bgc-tertiary w100 h100'/>
       </div>
     </div>
+    <div className='flexCenter gap10'>
+      <Loading />
+      <Loading color='secondary'/>
+      <Loading color='tertiary'/>
+    </div>
+    <div className='flexCenter mt20 gap10'>
+      <Location 
+        number={5}
+        icon={<p>I</p>}
+      />
+    </div>
     <Popup open={popup} onClose={()=>{setPopup(false)}}>
       <div className='flexColumn w400 p20 gap30 size14'>
         안녕하세요
@@ -195,9 +207,7 @@ function Page1() {
         </div>
       </div>
     </Popup>
-    <Loading />
-    <Loading color='secondary'/>
-    <Loading color='tertiary'/>
+    
 
     <Backdrop open={backdrop} onClose={()=>{setBackdrop(false)}}>
       <Loading />

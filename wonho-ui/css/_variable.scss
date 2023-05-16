@@ -207,6 +207,13 @@ html {
   --popover-otl : 1px solid var(--grayc);
   --popover-z: 100;
   --popover-shadow : var(--shadow);
+
+  // location
+  --location-gap : 5rem;
+  --location-font-size: 12rem;
+  --location-light: var(--gray9);
+  --location-light-hover: var(--gray6);
+  --location-bold: var(--black);
 }
 
 $colors: (

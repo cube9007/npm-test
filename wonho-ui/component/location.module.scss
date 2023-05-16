@@ -1,0 +1,27 @@
+@import "../css/variable";
+@import "../css/mixin";
+
+.location {
+    &-wrap {
+        display: flex;
+        gap: var(--location-gap);
+        align-items: center;
+    }    
+    &-light {
+        font-size: var(--location-font-size);
+        color: var(--location-light);
+        &:hover {
+            color: var(--location-light-hover);
+        }
+    }
+    &-bold {
+        font-size: var(--location-font-size);
+        color: var(--location-bold);
+    }
+    &-arrow {
+        @include mask('arrow-right.svg');
+        width: 20rem;
+        height: 20rem;
+        background-color: var(--gray6);
+    }
+}
